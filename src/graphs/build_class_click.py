@@ -49,4 +49,3 @@ def build_class_graphs(path_to_builded_projects, csv_files_folder, path_to_java_
 
 if __name__ == '__main__':
     build_class_graphs()
-#python build_class_click.py -b /home/jupyter-gwx973233/builded_gradle_reps/ -c /home/jupyter-gwx973233/utbot_ml/jtnames/data/processed/csv_files -j /home/jupyter-gwx973233/utbot_ml/jtnames/lib/javaparser-dloc-3.5.14-SNAPSHOT-jar-with-dependencies.jar -o /home/jupyter-gwx973233/utbot_ml/jtnames/data/processed/class_graphs_dvc -g  /home/jupyter-gwx973233/builded_gradle_reps/first_31.csv
