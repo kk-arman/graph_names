@@ -10,3 +10,5 @@
 .project
 tboard_logs
 *.zip
+*.ts
+*.pkl

@@ -38,7 +38,7 @@ class SimpleDecoder(nn.Module):
 
 class SimpleDecoderModified(nn.Module):
     def __init__(self, vocabulary, input_size, hidden_size=64):
-        super(SimpleDecoderImproved, self).__init__()
+        super(SimpleDecoderModified, self).__init__()
         self.max_label_length = vocabulary.max_name_length + 1
         self.hidden_size = hidden_size
         self.hidden_layer = nn.Linear(input_size+hidden_size, hidden_size)
