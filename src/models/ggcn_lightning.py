@@ -14,7 +14,8 @@ from torch.optim.lr_scheduler import CyclicLR
 from torch_geometric.data import DataLoader
 
 from .tgeometric.ggcn import GGCN
-from .tgeometric import decoders
+from .tgeometric.simple_decoder import SimpleDecoder
+from .tgeometric.simple_decoder import SimpleDecoderModified
 from .tgeometric.utils import print_prediction
 
 os.environ['TOKENIZERS_PARALLELISM'] = 'true'
@@ -53,13 +54,9 @@ class GGCNLightning(pl.LightningModule):
 
         decoder = hparams['decoder']
         if decoder == 'simple':
-            self.decoder = decoders.SimpleDecoder(vocabulary, enc_output_dim)  
-        elif decoder == 'simple_improved':
-            self.decoder = decoders.SimpleDecoderImproved(vocabulary, enc_output_dim)  
-        elif decoder == 'rnn':
-            self.decoder = decoders.RNN(vocabulary, enc_output_dim, decoder_hidden_size, decoder_num_layers)  
-        elif decoder == 'gru_cell':
-            self.decoder = decoders.GRUCellUnit(vocabulary, enc_output_dim)  
+            self.decoder = SimpleDecoder(vocabulary, enc_output_dim)  
+        elif decoder == 'simple_modified':
+            self.decoder = SimpleDecoderModified(vocabulary, enc_output_dim)  
         else:
             self.decoder = hparams['decoder']
         

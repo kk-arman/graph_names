@@ -20,7 +20,7 @@ stanza==1.1.1
 dash_html_components==1.1.2
 matplotlib==3.3.1
 colour==0.1.5
-dataclasses==0.8
+dataclasses
 python-dotenv==0.17.0
 PyYAML==5.4.1
 scikit_learn==0.24.1
@@ -28,4 +28,3 @@ sentence_transformers==1.0.4
 slackweb==1.0.5
 torch_geometric==1.6.3
 torch_optimizer==0.1.0
-torch_sparse==0.6.9

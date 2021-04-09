@@ -1,0 +1,12 @@
+*-checkpoint.ipynb
+*.pyc
+*__pycache__*
+.ipynb_checkpoints
+.vscode
+.dvc/config
+*.txt
+.classpath
+.settings
+.project
+tboard_logs
+*.zip

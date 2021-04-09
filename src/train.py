@@ -18,9 +18,9 @@ from data.scripts_for_filtration.method_name_tokenizer import tokenize
 from models.ggcn_lightning import GGCNLightning
 
 
-data_train = jtnames  / 'data/processed/fn_graphs/train'
-data_val = jtnames  / 'data/processed/fn_graphs/val'
-data_test = jtnames  / 'data/processed/fn_graphs/test'
+data_train = jtnames  / 'data/train'
+data_val = jtnames  / 'data/val'
+data_test = jtnames  / 'data/test'
 
 model_path = jtnames / 'models/model.ts'
 vocabulary_path = jtnames / 'models/vocabulary.pkl'
@@ -28,10 +28,10 @@ vocabulary_path = jtnames / 'models/vocabulary.pkl'
 
 hparams = {
     # Train hparams
-    'max_epochs': 50,
-    'batch_size': 32,
+    'max_epochs': 5,# trained on 40-50 epochs, 5 put to run on examples
+    'batch_size': 8, # trained on 32 batches, 8 put to run on examples
     'es_mode': 'min',
-    'es_patience': 20,
+    'es_patience': 20, # high patience to disable it
     'es_metric': 'val_loss',
     'lr': .005,
     'optimizer': 'Adam',
@@ -73,7 +73,7 @@ def train(hparams):
         patience=hparams['es_patience'],
         mode=hparams['es_mode'])
     trainer = pl.Trainer(
-        gpus=1,
+        gpus=0, # number gpus tu run, currently run set on cpu
         max_epochs=hparams['max_epochs'],
         logger=logger,
         callbacks=[estop]
