@@ -1,1 +1,1 @@
-# paper-test-draft
+# graph-names
