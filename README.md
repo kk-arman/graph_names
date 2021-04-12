@@ -17,4 +17,6 @@ pip install torch_scatter
 
 
 ## Java2Graph
+Based on https://github.com/mwcvitkovic/Open-Vocabulary-Learning-on-Source-Code-with-a-Graph-Structured-Cache--Code-Preprocessor
+
 1. `java -Xmx12g -XX:-UseGCOverheadLimit -jar Java2Graph/javaparser-dloc/target/javaparser-dloc-3.5.14-SNAPSHOT-jar-with-dependencies.jar PATH_TO_PROJECT OUTPUT_FOLDER PATH_TO_CSV NONE PROJECT_NAME`
