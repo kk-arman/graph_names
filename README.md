@@ -22,4 +22,4 @@ Based on https://github.com/mwcvitkovic/Open-Vocabulary-Learning-on-Source-Code-
 1. `java -Xmx12g -XX:-UseGCOverheadLimit -jar Java2Graph/javaparser-dloc/target/javaparser-dloc-3.5.14-SNAPSHOT-jar-with-dependencies.jar PATH_TO_PROJECT OUTPUT_FOLDER PATH_TO_CSV NONE PROJECT_NAME`
 
 
-Dataset available here https://disk.yandex.ru/d/cSUZustQfvsdNA
+Dataset of graphs available here https://disk.yandex.ru/d/cSUZustQfvsdNA
